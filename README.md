@@ -34,8 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![image](https://github.com/franclobo/newsletter/assets/58642949/14dd6bf3-150d-4501-a276-0f3d16c6471f)
 
 ### Links
 
