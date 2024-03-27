@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --tomato: hsl(4, 100%, 67%);
+  --light-tomato: hsl(4, 100%, 80%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+  }
+}
+.dark-slate-grey {
+  background-color: var(--dark-slate-grey);
+}
+.dark-slate-grey:hover {
+  background-color: var(--tomato);
+  box-shadow: 0 0 0 1px var(--tomato);
+}
+.tomato {
+  color: var(--tomato);
+}
+.bg-tomato {
+  background-color: var(--light-tomato);
+  color: var(--tomato);
+  border: solid 1px var(--tomato);
+}
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+.custom-list {
+  list-style-image: url(../public/assets/images/icon-list.svg);
+  padding-left: 20px;
+}
+
+li {
+  padding-left: 10px;
+}
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 720px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+  .content {
+    position: relative;
+    flex-direction: row-reverse;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .info {
+    padding: 100px;
+  }
+  .obscure {
+    background-color: var(--charcoal-grey);
+  }
+  .obscure > img {
+    visibility: hidden;
+  }
+  .success-modal {
+    background-color: var(--charcoal-grey);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    .modal-desktop{
+      position: absolute;
+      padding: 20px;
+      background-color: var(--white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      width: 50%;
+      height: 50%;
+      border-radius: 10px;
+      z-index: 100;
+      div {
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

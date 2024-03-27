@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Newsletter sign-up form with success message solution
 
-## Getting Started
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Frontend Mentor - Newsletter sign-up form with success message solution](#frontend-mentor---newsletter-sign-up-form-with-success-message-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Add their email and submit the form
+- See a success message with their email after successfully submitting the form
+- See form validation messages if:
+  - The field is left empty
+  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind](https://tailwindui.com/) - For styles
+
+### What I learned
+
+```css
+.custom-list {
+  list-style-image: url(../public/assets/images/icon-list.svg);
+  padding-left: 20px;
+}
 ```
+```js
+{successModalVisible && (
+          <section className="success-modal fixed top-0 left-0 mx-0 bg-white flex flex-col justify-center items-start gap-4 p-6 h-screen">
+            <div className="flex flex-col justify-center items-start gap-5 modal-desktop">
+              <Image src={Check} alt="Check icon" className="w-12 h-12" />
+              <h2 className="text-2xl font-bold">Thanks for subscribing!</h2>
+              <p>
+                A confirmation email has been sent to{" "}
+                <span className="font-bold">{email}</span>. Please open it and
+                click the button inside to confirm your subscription.
+              </p>
+              <div className="fixed bottom-0 left-0 p-4 w-full">
+                <button
+                  onClick={handleDismiss}
+                  className="w-full rounded border dark-slate-grey px-8 py-3 text-sm font-medium text-white"
+                >
+                  Dismiss message
+                </button>
+              </div>
+            </div>
+          </section>
+        )}
+```
+### Continued development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I want to configure the email sent to the user to confirm their subscription.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Useful resources
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Font optimization](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) - This helped me to optimize the fonts in my project.
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+- Website - [WebMinds Studio](https://www.webmindsstudio.com/)
+- Frontend Mentor - [@franclobo](https://www.frontendmentor.io/profile/franclobo)
+- Twitter - [@Pancho2788](https://twitter.com/Pancho2788)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I would like to thank Frontend Mentor for the opportunity to practice my skills and improve my knowledge in web development and anybody who gives me feedback on my projects.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
